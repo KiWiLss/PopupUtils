@@ -12,7 +12,7 @@ import android.widget.TextView;
  * Created by 刘少帅 on 2017/10/25
  */
 
-public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
+public class PopupTOBtn extends BottomPushPopupWindow <PopupTOBtn.BtnClick>{
 
 
     private CardView cvCv;
@@ -23,7 +23,7 @@ public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
     /**设置圆角
      * @param multiple
      */
-    public PopupTwoBtn setRadius(int multiple){
+    public PopupTOBtn setRadius(int multiple){
         float dimension1 = context.getResources().getDimension(R.dimen.m5);
         if (cvCv!=null){
             cvCv.setRadius(dimension1*multiple);
@@ -32,7 +32,7 @@ public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
     }
 
     //设置提示
-    public PopupTwoBtn setHint(String hint,int textColor,boolean isBold){
+    public PopupTOBtn setHint(String hint, int textColor, boolean isBold){
         if (!TextUtils.isEmpty(hint)){
             tvOne.setText(hint);
         }
@@ -44,7 +44,7 @@ public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
         return this;
     }
     //设置标题
-    public PopupTwoBtn setTitle(String title,int textColor,boolean isBold){
+    public PopupTOBtn setTitle(String title, int textColor, boolean isBold){
         if (!TextUtils.isEmpty(title)){
             tvTwo.setText(title);
         }
@@ -55,7 +55,7 @@ public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
         }
         return this;
     }
-    public PopupTwoBtn setSureTextAndColor(String text,int textColor,int backColor){
+    public PopupTOBtn setSureTextAndColor(String text, int textColor, int backColor){
         if (!TextUtils.isEmpty(text)){
             tvSure.setText(text);
         }
@@ -70,12 +70,12 @@ public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
 
 
 
-    public PopupTwoBtn(Context context, PopupTwoBtn.BtnClick btnClick) {
+    public PopupTOBtn(Context context, PopupTOBtn.BtnClick btnClick) {
         super(context, btnClick);
     }
 
     @Override
-    protected View generateCustomView(final PopupTwoBtn.BtnClick btnClick) {
+    protected View generateCustomView(final PopupTOBtn.BtnClick btnClick) {
         View contentView = View.inflate(context, R.layout.overall_pw_two_btn, null);
         cvCv = (CardView) contentView.findViewById(R.id.cv_pw_twobtn_cv);
         tvOne = (TextView) contentView.findViewById(R.id.tv_pw_twobtn_titleOne);
@@ -85,13 +85,13 @@ public class PopupTwoBtn extends BottomPushPopupWindow <PopupTwoBtn.BtnClick>{
         tvSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnClick.sureClickListener(PopupTwoBtn.this);
+                btnClick.sureClickListener(PopupTOBtn.this);
             }
         });
         return contentView;
     }
 
     public interface BtnClick{
-        void sureClickListener(PopupTwoBtn ptb);
+        void sureClickListener(PopupTOBtn ptb);
     }
 }

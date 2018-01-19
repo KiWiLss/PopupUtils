@@ -12,7 +12,7 @@ import android.widget.TextView;
  * Created by 刘少帅 on 2017/10/24
  */
 
-public class PopupOneBtn extends BottomPushPopupWindow<PopupOneBtn.BtnClick> {
+public class PopupOOBtn extends BottomPushPopupWindow<PopupOOBtn.BtnClick> {
 
 
     private TextView tvTitle;
@@ -23,7 +23,7 @@ public class PopupOneBtn extends BottomPushPopupWindow<PopupOneBtn.BtnClick> {
     /**设置圆角弧度
      * @param multiple 倍数
      */
-    public PopupOneBtn setRadius(int multiple){
+    public PopupOOBtn setRadius(int multiple){
         float dimension1 = context.getResources().getDimension(R.dimen.m5);
         if (cvCv!=null){
             cvCv.setRadius(dimension1*multiple);
@@ -35,7 +35,7 @@ public class PopupOneBtn extends BottomPushPopupWindow<PopupOneBtn.BtnClick> {
      * @param color
      * @param isBold
      */
-    public PopupOneBtn setTitleAndColor(String title,int color,boolean isBold){
+    public PopupOOBtn setTitleAndColor(String title, int color, boolean isBold){
         if (!TextUtils.isEmpty(title)){
             tvTitle.setText(title);
         }
@@ -46,7 +46,7 @@ public class PopupOneBtn extends BottomPushPopupWindow<PopupOneBtn.BtnClick> {
         }
         return this;
     }
-    public PopupOneBtn setSureTextAndColor(String text,int textColor,int backColor){
+    public PopupOOBtn setSureTextAndColor(String text, int textColor, int backColor){
         if (!TextUtils.isEmpty(text)){
             tvSure.setText(text);
         }
@@ -62,7 +62,7 @@ public class PopupOneBtn extends BottomPushPopupWindow<PopupOneBtn.BtnClick> {
 
 
 
-    public PopupOneBtn(Context context, BtnClick btnClick) {
+    public PopupOOBtn(Context context, BtnClick btnClick) {
         super(context, btnClick);
     }
 
@@ -76,13 +76,13 @@ public class PopupOneBtn extends BottomPushPopupWindow<PopupOneBtn.BtnClick> {
         tvSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnClick.sureClickListener(PopupOneBtn.this);
+                btnClick.sureClickListener(PopupOOBtn.this);
             }
         });
         return contentView;
     }
 
     public interface BtnClick{
-        void sureClickListener(PopupOneBtn pob);
+        void sureClickListener(PopupOOBtn pob);
     }
 }

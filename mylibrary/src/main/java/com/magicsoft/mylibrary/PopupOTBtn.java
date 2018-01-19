@@ -13,8 +13,8 @@ import android.widget.TextView;
  * Email:2763015920@qq.com
  */
 
-public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentClickListener> {
-    public PopupOneUtils(Context context, ContentClickListener contentClickListener) {
+public class PopupOTBtn extends BottomPushPopupWindow<PopupOTBtn.ContentClickListener> {
+    public PopupOTBtn(Context context, ContentClickListener contentClickListener) {
         super(context, contentClickListener);
     }
     TextView tvTitle;
@@ -25,7 +25,7 @@ public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentCl
     /**设置圆角弧度
      * @param multiple 倍数
      */
-    public PopupOneUtils setRadius(int multiple){
+    public PopupOTBtn setRadius(int multiple){
         float dimension1 = context.getResources().getDimension(R.dimen.m5);
         if (cvCv!=null){
             cvCv.setRadius(dimension1*multiple);
@@ -37,7 +37,7 @@ public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentCl
      * @param color
      * @param isBold
      */
-    public PopupOneUtils setTitleAndColor(String title,int color,boolean isBold){
+    public PopupOTBtn setTitleAndColor(String title, int color, boolean isBold){
         if (!TextUtils.isEmpty(title)){
             tvTitle.setText(title);
         }
@@ -48,7 +48,7 @@ public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentCl
         }
         return this;
     }
-    public PopupOneUtils setSureTextAndColor(String text,int textColor,int backColor){
+    public PopupOTBtn setSureTextAndColor(String text, int textColor, int backColor){
         if (!TextUtils.isEmpty(text)){
             tvSure.setText(text);
         }
@@ -60,7 +60,7 @@ public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentCl
         }
         return this;
     }
-    public PopupOneUtils setCancelTextAndColor(String text,int textColor,int backColor){
+    public PopupOTBtn setCancelTextAndColor(String text, int textColor, int backColor){
         if (!TextUtils.isEmpty(text)){
             tvCancel.setText(text);
         }
@@ -91,7 +91,7 @@ public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentCl
         tvSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contentClickListener.sureClickListener(PopupOneUtils.this);
+                contentClickListener.sureClickListener(PopupOTBtn.this);
             }
         });
         return contentView;
@@ -100,7 +100,7 @@ public class PopupOneUtils extends BottomPushPopupWindow<PopupOneUtils.ContentCl
 
 
     public interface ContentClickListener{
-        void sureClickListener(PopupOneUtils pou);
+        void sureClickListener(PopupOTBtn pou);
         void cancelClickListener();
     }
 }

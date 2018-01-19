@@ -14,7 +14,7 @@ import android.widget.TextView;
  * Email:2763015920@qq.com
  */
 
-public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTClickListener>{
+public class PopupTTBtn extends BottomPushPopupWindow<PopupTTBtn.ContentTClickListener>{
 
 
     private TextView tvHint;
@@ -23,14 +23,14 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
     private TextView tvTitle;
     private CardView cvCv;
 
-    public PopupTwoUtils(Context context, ContentTClickListener contentTClickListener) {
+    public PopupTTBtn(Context context, ContentTClickListener contentTClickListener) {
         super(context, contentTClickListener);
     }
 
     /**设置圆角
      * @param multiple
      */
-    public PopupTwoUtils setRadius(int multiple){
+    public PopupTTBtn setRadius(int multiple){
         float dimension1 = context.getResources().getDimension(R.dimen.m5);
         if (cvCv!=null){
             cvCv.setRadius(dimension1*multiple);
@@ -39,7 +39,7 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
     }
 
     //设置提示
-    public PopupTwoUtils setHint(String hint,int textColor,boolean isBold){
+    public PopupTTBtn setHint(String hint, int textColor, boolean isBold){
         if (!TextUtils.isEmpty(hint)){
             tvHint.setText(hint);
         }
@@ -51,7 +51,7 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
         return this;
     }
     //设置标题
-    public PopupTwoUtils setTitle(String title,int textColor,boolean isBold){
+    public PopupTTBtn setTitle(String title, int textColor, boolean isBold){
         if (!TextUtils.isEmpty(title)){
             tvTitle.setText(title);
         }
@@ -62,7 +62,7 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
         }
         return this;
     }
-    public PopupTwoUtils setSureTextAndColor(String text,int textColor,int backColor){
+    public PopupTTBtn setSureTextAndColor(String text, int textColor, int backColor){
         if (!TextUtils.isEmpty(text)){
             tvSure.setText(text);
         }
@@ -74,7 +74,7 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
         }
         return this;
     }
-    public PopupTwoUtils setCancelTextAndColor(String text,int textColor,int backColor){
+    public PopupTTBtn setCancelTextAndColor(String text, int textColor, int backColor){
         if (!TextUtils.isEmpty(text)){
             tvCancel.setText(text);
         }
@@ -111,7 +111,7 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
         tvSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contentClickListener.sureClickListener(PopupTwoUtils.this);
+                contentClickListener.sureClickListener(PopupTTBtn.this);
             }
         });
         return contentView;
@@ -119,7 +119,7 @@ public class PopupTwoUtils extends BottomPushPopupWindow<PopupTwoUtils.ContentTC
 
 
     public interface ContentTClickListener{
-        void sureClickListener(PopupTwoUtils ptu);
+        void sureClickListener(PopupTTBtn ptu);
         void cancelClickListener();
     }
 }
