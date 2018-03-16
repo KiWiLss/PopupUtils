@@ -17,7 +17,10 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.KiWiLss:PopupUtils:0.0.4'
+	        compile 'com.github.KiWiLss:PopupUtils:1.0.0'
 	}
 Copy
 Share this release:
+
+
+[简书详解使用方法](https://www.jianshu.com/p/dc7fae15d006)
