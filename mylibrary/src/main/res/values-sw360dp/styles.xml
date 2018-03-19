@@ -40,4 +40,12 @@
         <item name="android:windowExitAnimation">@anim/fade_center_out</item>
     </style>
 
+
+    <style name="LineLand">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/m1</item>
+        <item name="android:background">@color/grayf5f5</item>
+    </style>
+
+
 </resources>
