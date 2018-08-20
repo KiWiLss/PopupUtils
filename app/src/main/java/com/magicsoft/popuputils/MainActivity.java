@@ -92,6 +92,6 @@ public class MainActivity extends AppCompatActivity {
         PopupWindowUtils popupWindowUtils = new PopupWindowUtils(view);
         popupWindowUtils.setContentView(R.layout.pw_bottom_menu);
         //popupWindowUtils.showCenter();
-        popupWindowUtils.showLikePopDownLeftMenu();
+        popupWindowUtils.showLikePopDownLeftMenu();//
     }
 }
