@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.magicsoft.mylibrary.PopupUtils;
 import com.magicsoft.mylibrary.PopupWindowUtils;
 import com.magicsoft.mylibrary.PwChoiceHeader;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
         pwChoiceHeader.setAnimationStyle(R.style.PushInBottom);
         pwChoiceHeader.showBottom(this);
+       //pwChoiceHeader.showDrop(view,0,0);
 //        new PopupOneBtn(this, new PopupOneBtn.BtnClick() {
 //            @Override
 //            public void sureClickListener(PopupOneBtn popupOneBtn) {
@@ -56,26 +58,40 @@ public class MainActivity extends AppCompatActivity {
 //                .showCenter(this);
     }
 
+    /**带阴影的菜单样式
+     * @param view
+     */
     public void menu(View view) {
-//        PopupOneUtils popupOneUtils = new PopupOneUtils(this, new PopupOneUtils.ContentClickListener() {
+//        PopupOOBtn popupOOBtn = new PopupOOBtn(this, new PopupOOBtn.BtnClick() {
 //            @Override
-//            public void sureClickListener(PopupOneUtils popupOneUtils) {
-//
-//            }
-//
-//            @Override
-//            public void cancelClickListener() {
+//            public void sureClickListener(PopupOOBtn pob) {
 //
 //            }
 //        });
-//        popupOneUtils.setAnimationStyle(R.style.PopDownLeftMenu);
-//        popupOneUtils.showAsDropDown(view);
-        //popupOneUtils.showAsDropDown(view,0,0);
+//
+//        popupOOBtn.setAnimationStyle(R.style.PopDownLeftMenu);
+//        popupOOBtn.showAsDropDown(view);
+        //popupOOBtn.showAsDropDown(view,0,0);
+
+        PopupUtils popupUtils = new PopupUtils(this, R.layout.pw_menu);
+        popupUtils.showAsDropDown(view);
     }
 
+    /**背景无阴影样式菜单
+     * @param view
+     */
     public void leftMenu(View view) {
         PopupWindowUtils popupWindowUtils = new PopupWindowUtils(view);
-        popupWindowUtils.setContentView(R.layout.pw_menu);
+        popupWindowUtils.setContentView(R.layout.pw_menu1);
+        popupWindowUtils.showLikePopDownLeftMenu();
+    }
+    /**背景无阴影样式菜单
+     * @param view
+     */
+    public void bottomMenu(View view) {
+        PopupWindowUtils popupWindowUtils = new PopupWindowUtils(view);
+        popupWindowUtils.setContentView(R.layout.pw_bottom_menu);
+        //popupWindowUtils.showCenter();
         popupWindowUtils.showLikePopDownLeftMenu();
     }
 }

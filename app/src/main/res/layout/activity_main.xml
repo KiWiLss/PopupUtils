@@ -36,6 +36,11 @@
             android:text="左侧"
             android:onClick="leftMenu"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="底部菜单"
+            android:onClick="bottomMenu"/>
 </LinearLayout>
 
 </ScrollView>

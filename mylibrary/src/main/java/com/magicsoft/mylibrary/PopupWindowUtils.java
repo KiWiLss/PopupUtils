@@ -83,7 +83,8 @@ public class PopupWindowUtils {
             this.window.setBackgroundDrawable(this.background);
         }
 
-        this.window.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        //this.window.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        this.window.setWidth(WindowManager.LayoutParams.MATCH_PARENT);
         this.window.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
        // this.window.setTouchable(true);
         this.window.setFocusable(true);
