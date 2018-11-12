@@ -1,5 +1,6 @@
 package com.magicsoft.popuputils;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -89,9 +90,11 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void bottomMenu(View view) {
-        PopupWindowUtils popupWindowUtils = new PopupWindowUtils(view);
-        popupWindowUtils.setContentView(R.layout.pw_bottom_menu);
-        //popupWindowUtils.showCenter();
-        popupWindowUtils.showLikePopDownLeftMenu();//
+//        PopupWindowUtils popupWindowUtils = new PopupWindowUtils(view);
+//        popupWindowUtils.setContentView(R.layout.pw_bottom_menu);
+//        //popupWindowUtils.showCenter();
+//        popupWindowUtils.showLikePopDownLeftMenu();//
+
+        startActivity(new Intent(this,TestActivity.class));
     }
 }
