@@ -25,7 +25,7 @@ public class TestActivity extends AppCompatActivity {
     }
 
     public void bottomMenu(View view) {
-
+        //不带dimen使用
         new PopupOTBtn(this, new PopupOTBtn.ContentClickListener() {
             @Override
             public void sureClickListener(PopupOTBtn pou) {
@@ -52,7 +52,7 @@ public class TestActivity extends AppCompatActivity {
             public void cancelClickListener() {
 
             }
-        })
-                .showCenter(this);
+        }).showCenter(this);
+
     }
 }
