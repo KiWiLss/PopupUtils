@@ -5,8 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/PopupUtils.iml" filepath="$PROJECT_DIR$/PopupUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/january.iml" filepath="$PROJECT_DIR$/january.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nodimen/nodimen.iml" filepath="$PROJECT_DIR$/nodimen/nodimen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/popuputils/popuputils.iml" filepath="$PROJECT_DIR$/popuputils/popuputils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/popupwindow/popupwindow.iml" filepath="$PROJECT_DIR$/popupwindow/popupwindow.iml" />
     </modules>
   </component>
 </project>

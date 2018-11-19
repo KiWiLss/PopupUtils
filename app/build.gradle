@@ -29,7 +29,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //compile 'com.github.KiWiLss:PopupUtils:0.0.5'
-    implementation project(':mylibrary')
+    implementation project(':popuputils')
 
-    implementation project(':nodimen')
+    implementation project(':popupwindow')
 }
