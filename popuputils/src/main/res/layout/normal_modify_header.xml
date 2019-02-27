@@ -28,9 +28,10 @@
             android:gravity="center_horizontal"
             />
         <View
-            style="@style/LineLand"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/m0.5"
             android:layout_marginTop="@dimen/m17"
+            android:background="@color/grayf5f5"
             />
 
         <TextView
