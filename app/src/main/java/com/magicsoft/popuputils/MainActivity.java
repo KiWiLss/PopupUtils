@@ -1,14 +1,17 @@
 package com.magicsoft.popuputils;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
 import com.magicsoft.mylibrary.PopupUtils;
 import com.magicsoft.mylibrary.PopupWindowUtils;
 import com.magicsoft.mylibrary.PwChoiceHeader;
+import com.magicsoft.popuputils.camera.CameraActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -96,5 +99,29 @@ public class MainActivity extends AppCompatActivity {
 //        popupWindowUtils.showLikePopDownLeftMenu();//
 
         startActivity(new Intent(this,TestActivity.class));
+    }
+
+    public void defaultPw(View view) {
+        View contentView = LayoutInflater.from(this).inflate(R.layout.pw_menu2, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        AlertDialog alertDialog = builder.create();
+
+        alertDialog.setView(contentView);
+
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+    }
+
+    public void servilable(View view) {
+        User user = new User("hello");
+        Intent intent = new Intent(this, TestActivity.class);
+        intent.putExtra("user",user);
+        startActivity(intent);
+    }
+
+    public void cameraListener(View view) {
+        Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
     }
 }
