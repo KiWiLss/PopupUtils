@@ -11,7 +11,9 @@ import android.widget.Toast;
 import com.magicsoft.mylibrary.PopupUtils;
 import com.magicsoft.mylibrary.PopupWindowUtils;
 import com.magicsoft.mylibrary.PwChoiceHeader;
+import com.magicsoft.popuputils.album.CameraTestActivity;
 import com.magicsoft.popuputils.camera.CameraActivity;
+import com.magicsoft.popuputils.camera.CameraActivity2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//    String url = "http://openapi.unionpay95516.cc/common.api/QrCodeServlet?qrContent=";
+//        String s = Utils.urlEncode("https://card.weimilo.com/#/?org_code=6fd1f0f3f37acebb&user_code=LD666632");
+//
+//        Log.e("MMM", "onCreate: "+s );
+//
+//        Log.e("MMM", "onCreate: ---"+(url + s) );
+
 
 
 
@@ -122,6 +132,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void cameraListener(View view) {
         Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
+    }
+
+    public void cameraListener2(View view) {
+        Intent intent = new Intent(this, CameraActivity2.class);
+        startActivity(intent);
+    }
+
+    public void cameraListener3(View view) {
+        Intent intent = new Intent(this, CameraTestActivity.class);
         startActivity(intent);
     }
 }

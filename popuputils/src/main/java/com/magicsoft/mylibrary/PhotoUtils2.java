@@ -105,21 +105,10 @@ public class PhotoUtils2 {
                     Bundle extras = data.getExtras();
                     if (extras!=null){
                         Bitmap photo = extras.getParcelable("data");
+                        //压缩生成文件
                         return photo;
                     }
                     break;
-            }
-        }
-        return null;
-    }
-    public Bitmap onActivityResult2(int requestCode, int resultCode, Intent data){
-        if (resultCode==RESULT_OK){
-            if (requestCode==PHOTO_RESULT){
-                Bundle extras = data.getExtras();
-                if (extras!=null){
-                    Bitmap photo = extras.getParcelable("data");
-                    return photo;
-                }
             }
         }
         return null;

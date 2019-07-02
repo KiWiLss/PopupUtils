@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/popuputils" />
             <option value="$PROJECT_DIR$/popupwindow" />
+            <option value="$PROJECT_DIR$/ximageselect" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

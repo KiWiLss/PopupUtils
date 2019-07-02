@@ -28,6 +28,9 @@
         <activity android:name=".TestActivity" android:screenOrientation="portrait"/>
         <activity android:name=".camera.CameraActivity" android:screenOrientation="portrait"/>
 
+        <activity android:name=".camera.CameraActivity2" android:screenOrientation="portrait"/>
+        <activity android:name=".album.CameraTestActivity" android:screenOrientation="portrait"/>
+
 
         <!--<provider-->
             <!--android:name="android.support.v4.content.FileProvider"-->

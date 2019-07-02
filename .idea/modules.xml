@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/january.iml" filepath="$PROJECT_DIR$/january.iml" />
       <module fileurl="file://$PROJECT_DIR$/popuputils/popuputils.iml" filepath="$PROJECT_DIR$/popuputils/popuputils.iml" />
       <module fileurl="file://$PROJECT_DIR$/popupwindow/popupwindow.iml" filepath="$PROJECT_DIR$/popupwindow/popupwindow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ximageselect/ximageselect.iml" filepath="$PROJECT_DIR$/ximageselect/ximageselect.iml" />
     </modules>
   </component>
 </project>

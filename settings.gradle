@@ -1,1 +1,1 @@
-include ':app', ':popuputils', ':popupwindow'
+include ':app', ':popuputils', ':popupwindow', ':ximageselect'
