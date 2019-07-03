@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.magicsoft.mylibrary.PopupUtils;
 import com.magicsoft.mylibrary.PopupWindowUtils;
 import com.magicsoft.mylibrary.PwChoiceHeader;
+import com.magicsoft.popuputils.album.CameraFgActivity;
 import com.magicsoft.popuputils.album.CameraTestActivity;
 import com.magicsoft.popuputils.camera.CameraActivity;
 import com.magicsoft.popuputils.camera.CameraActivity2;
@@ -142,6 +143,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void cameraListener3(View view) {
         Intent intent = new Intent(this, CameraTestActivity.class);
+        startActivity(intent);
+    }
+
+    public void cameraListener4(View view) {
+        Intent intent = new Intent(this, CameraFgActivity.class);
         startActivity(intent);
     }
 }

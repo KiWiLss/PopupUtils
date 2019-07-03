@@ -68,6 +68,12 @@
         android:layout_height="wrap_content"
         android:text="拍照,相册详解"
         android:onClick="cameraListener3"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拍照,相册详解fg"
+        android:onClick="cameraListener4"/>
 </LinearLayout>
 
 </ScrollView>
