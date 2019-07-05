@@ -70,6 +70,7 @@ public class PhotoUtils {
             e.printStackTrace();
         }
         Uri imgUri = Uri.fromFile(outputImage);
+
         //启动相机程序
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imgUri);

@@ -1,6 +1,7 @@
 package com.magicsoft.popuputils.album;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -34,7 +35,7 @@ public class CameraTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_camera_test);
 
         mIvPic = (ImageView) findViewById(R.id.iv_camera_test_pic);
-        mXImgSelect = new XImgSelect(this, true, new XImgSelectCallback() {
+        mXImgSelect = new XImgSelect(this, false, new XImgSelectCallback() {
 
             @Override
             public void noCamerPermission(boolean isShow) {
@@ -48,7 +49,9 @@ public class CameraTestActivity extends AppCompatActivity {
             @Override
             public void getPicPath(String path) {
                 Log.e(TAG, "getPicPath: "+path);
-                mIvPic.setImageBitmap(BitmapFactory.decodeFile(path));
+                Bitmap bitmap = BitmapFactory.decodeFile(path);
+                mIvPic.setImageBitmap(bitmap);
+                //BitmapUtils.saveBpImageToGallery(CameraTestActivity.this,bitmap);
             }
         });
 
